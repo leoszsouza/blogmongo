@@ -12,7 +12,9 @@
 # Full reference is available at:
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
-
+server:
+    port: 8080
+    
 logging:
     level:
         ROOT: INFO
@@ -27,8 +29,8 @@ spring:
             enabled: false
     data:
         mongodb:
-            uri: mongodb://localhost:27017
-            database: blogmongo
+            database:heroku_lbdpdmb0
+            
     mail:
         host: localhost
         port: 25
