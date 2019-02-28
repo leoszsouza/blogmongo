@@ -29,7 +29,7 @@ spring:
             enabled: false
     data:
         mongodb:
-            database:heroku_lbdpdmb0
+            database: heroku_lbdpdmb0
             
     mail:
         host: localhost
