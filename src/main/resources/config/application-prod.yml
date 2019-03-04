@@ -36,6 +36,7 @@ spring:
             indent-output: true
     data:
         mongodb:
+            uri: mongodb://heroku_lbdpdmb0:3jig0l5gl1rqr1d6b0ppajpcdj@ds157873.mlab.com:57873/heroku_lbdpdmb0
             database: heroku_lbdpdmb0
     mail:
         host: localhost
