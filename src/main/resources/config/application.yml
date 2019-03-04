@@ -76,6 +76,7 @@ spring:
         mode: HTML
 
 server:
+    port: 5000
     servlet:
         session:
             cookie:
