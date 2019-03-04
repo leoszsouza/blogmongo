@@ -68,12 +68,13 @@ public class BlogmongoApp {
         if (env.getProperty("server.ssl.key-store") != null) {
             protocol = "https";
         }
+        
         String serverPort = env.getProperty("server.port");
         String contextPath = env.getProperty("server.servlet.context-path");
         if (StringUtils.isBlank(contextPath)) {
             contextPath = "/";
         }
-        String hostAddress = "localhost";
+        String hostAddress = "0.0.0.0";
         try {
             hostAddress = InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
