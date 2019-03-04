@@ -15,13 +15,8 @@ spring:
             enabled: false
     data:
         mongodb:
-            database: heroku_lbdpdmb0
-            
-    mail:
-        host: localhost
-        port: 25
-        username:
-        password:
+            database: heroku_lbdpdmb0      
+   
     thymeleaf:
         cache: true
 
@@ -34,24 +29,12 @@ server:
 
 jhipster:
     http:
-        version: V_1_1 # To use HTTP/2 you will need SSL support (see above the "server.ssl" configuration)
-        cache: # Used by the CachingHttpHeadersFilter
+        version: V_1_1
+        cache: 
             timeToLiveInDays: 1461
     security:
-        remember-me:
-            # security key (this key should be unique for your application, and kept secret)
+        remember-me:            
             key: 965f1e8fc37752b23e15a12a49a316bba84e2387380628280325450fc2121dbadea3513d996c3c41e9989e52e56f411c0017
-    mail: # specific JHipster mail property, for standard properties see MailProperties
-        from: blogmongo@localhost
-        base-url: http://my-server-url-to-change # Modify according to your server's URL
-    metrics:
-        logs: # Reports metrics in the logs
-            enabled: false
-            report-frequency: 60 # in seconds
-    logging:
-        logstash: # Forward logs to logstash over a socket, used by LoggingConfiguration
-            enabled: false
-            host: localhost
-            port: 5000
-            queue-size: 512
+
+
 
