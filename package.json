@@ -23,7 +23,7 @@
         "@ngx-translate/http-loader": "4.0.0",
         "bootstrap": "4.2.1",
         "core-js": "2.6.3",
-        "heroku": "^7.22.1",
+        "heroku": "^7.22.2",
         "jhipster": "0.0.2",
         "moment": "2.24.0",
         "ng-jhipster": "0.9.1",
