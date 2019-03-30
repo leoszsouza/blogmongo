@@ -18,27 +18,27 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "job",
             "otherEntityName": "job",
+            "otherEntityRelationshipName": "jobHistory",
+            "relationshipName": "job",
             "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "jobHistory"
+            "ownerSide": true
         },
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "department",
             "otherEntityName": "department",
+            "otherEntityRelationshipName": "jobHistory",
+            "relationshipName": "department",
             "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "jobHistory"
+            "ownerSide": true
         },
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "employee",
             "otherEntityName": "employee",
+            "otherEntityRelationshipName": "jobHistory",
+            "relationshipName": "employee",
             "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "jobHistory"
+            "ownerSide": true
         }
     ],
     "changelogDate": "20190227005514",

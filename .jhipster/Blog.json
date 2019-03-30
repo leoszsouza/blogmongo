@@ -1,0 +1,30 @@
+{
+    "name": "Blog",
+    "fields": [
+        {
+            "fieldName": "usuario",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "post",
+            "otherEntityRelationshipName": "blog",
+            "relationshipName": "blog"
+        }
+    ],
+    "changelogDate": "20190330034335",
+    "entityTableName": "blog",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

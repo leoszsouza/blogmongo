@@ -40,16 +40,16 @@
         },
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "job",
             "otherEntityName": "job",
-            "otherEntityRelationshipName": "employee"
+            "otherEntityRelationshipName": "employee",
+            "relationshipName": "job"
         },
         {
             "relationshipType": "many-to-one",
-            "relationshipName": "manager",
             "otherEntityName": "employee",
-            "otherEntityField": "id",
-            "otherEntityRelationshipName": "employee"
+            "otherEntityRelationshipName": "employee",
+            "relationshipName": "manager",
+            "otherEntityField": "id"
         }
     ],
     "changelogDate": "20190227005512",

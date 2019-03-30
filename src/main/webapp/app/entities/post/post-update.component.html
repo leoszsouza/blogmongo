@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-post-heading">Create or edit a Post</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!post.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="post.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_titulo">Titulo</label>
+                    <input type="text" class="form-control" name="titulo" id="field_titulo"
+                        [(ngModel)]="post.titulo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_conteudo">Conteudo</label>
+                    <input type="text" class="form-control" name="conteudo" id="field_conteudo"
+                        [(ngModel)]="post.conteudo" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_dhPublicacao">Dh Publicacao</label>
+                    <div class="d-flex">
+                        <input id="field_dhPublicacao" type="datetime-local" class="form-control" name="dhPublicacao" [(ngModel)]="dhPublicacao" placeholder="YYYY-MM-DD HH:mm"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_post">Post</label>
+                    <select class="form-control" id="field_post" name="post" [(ngModel)]="post.post" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="blogOption.id === post.post?.id ? post.post : blogOption" *ngFor="let blogOption of blogs; trackBy: trackBlogById">{{blogOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_blog">Blog</label>
+                    <select class="form-control" id="field_blog" name="blog" [(ngModel)]="post.blog" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="blogOption.id === post.blog?.id ? post.blog : blogOption" *ngFor="let blogOption of blogs; trackBy: trackBlogById">{{blogOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

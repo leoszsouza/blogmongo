@@ -68,6 +68,7 @@ public class LocationServiceImpl implements LocationService {
      */
     @Override
     public void delete(String id) {
-        log.debug("Request to delete Location : {}", id);        locationRepository.deleteById(id);
+        log.debug("Request to delete Location : {}", id);
+        locationRepository.deleteById(id);
     }
 }

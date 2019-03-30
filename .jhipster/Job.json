@@ -23,9 +23,9 @@
         },
         {
             "relationshipType": "many-to-many",
+            "otherEntityName": "task",
             "otherEntityRelationshipName": "job",
             "relationshipName": "task",
-            "otherEntityName": "task",
             "otherEntityField": "title",
             "ownerSide": true
         }

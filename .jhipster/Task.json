@@ -13,10 +13,11 @@
     "relationships": [
         {
             "relationshipType": "many-to-many",
-            "relationshipName": "job",
             "otherEntityName": "job",
-            "ownerSide": false,
-            "otherEntityRelationshipName": "task"
+            "otherEntityRelationshipName": "task",
+            "relationshipName": "job",
+            "otherEntityField": "id",
+            "ownerSide": false
         }
     ],
     "changelogDate": "20190227005511",
