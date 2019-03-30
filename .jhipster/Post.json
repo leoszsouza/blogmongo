@@ -1,0 +1,41 @@
+{
+    "name": "Post",
+    "fields": [
+        {
+            "fieldName": "titulo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "conteudo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dhPublicacao",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "blog",
+            "otherEntityRelationshipName": "post",
+            "relationshipName": "post",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "blog",
+            "otherEntityName": "blog",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190330034334",
+    "entityTableName": "post",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

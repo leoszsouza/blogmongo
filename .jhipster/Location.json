@@ -21,11 +21,11 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "country",
             "otherEntityName": "country",
+            "otherEntityRelationshipName": "location",
+            "relationshipName": "country",
             "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "location"
+            "ownerSide": true
         }
     ],
     "changelogDate": "20190227005509",

@@ -68,6 +68,7 @@ public class DepartmentServiceImpl implements DepartmentService {
      */
     @Override
     public void delete(String id) {
-        log.debug("Request to delete Department : {}", id);        departmentRepository.deleteById(id);
+        log.debug("Request to delete Department : {}", id);
+        departmentRepository.deleteById(id);
     }
 }

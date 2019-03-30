@@ -70,6 +70,7 @@ public class JobHistoryServiceImpl implements JobHistoryService {
      */
     @Override
     public void delete(String id) {
-        log.debug("Request to delete JobHistory : {}", id);        jobHistoryRepository.deleteById(id);
+        log.debug("Request to delete JobHistory : {}", id);
+        jobHistoryRepository.deleteById(id);
     }
 }
