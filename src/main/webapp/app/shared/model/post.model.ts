@@ -6,17 +6,9 @@ export interface IPost {
     titulo?: string;
     conteudo?: string;
     dhPublicacao?: Moment;
-    post?: IBlog;
     blog?: IBlog;
 }
 
 export class Post implements IPost {
-    constructor(
-        public id?: string,
-        public titulo?: string,
-        public conteudo?: string,
-        public dhPublicacao?: Moment,
-        public post?: IBlog,
-        public blog?: IBlog
-    ) {}
+    constructor(public id?: string, public titulo?: string, public conteudo?: string, public dhPublicacao?: Moment, public blog?: IBlog) {}
 }
