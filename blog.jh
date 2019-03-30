@@ -108,9 +108,6 @@ relationship ManyToOne {
 	Employee{manager} to Employee
 }
 
-relationship ManyToOne {
-	Post{post} to Blog
-}
 
 // defining multiple oneToOne relationships
 relationship OneToOne {
