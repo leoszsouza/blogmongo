@@ -32,11 +32,6 @@ public class Post implements Serializable {
     private Instant dhPublicacao;
 
     @DBRef
-    @Field("post")
-    @JsonIgnoreProperties("posts")
-    private Blog post;
-
-    @DBRef
     @Field("blog")
     @JsonIgnoreProperties("blogs")
     private Blog blog;
@@ -87,19 +82,6 @@ public class Post implements Serializable {
 
     public void setDhPublicacao(Instant dhPublicacao) {
         this.dhPublicacao = dhPublicacao;
-    }
-
-    public Blog getPost() {
-        return post;
-    }
-
-    public Post post(Blog blog) {
-        this.post = blog;
-        return this;
-    }
-
-    public void setPost(Blog blog) {
-        this.post = blog;
     }
 
     public Blog getBlog() {

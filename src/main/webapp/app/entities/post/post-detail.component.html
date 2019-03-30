@@ -17,12 +17,6 @@
                 <dd>
                     <span>{{post.dhPublicacao}}</span>
                 </dd>
-                <dt><span>Post</span></dt>
-                <dd>
-                    <div *ngIf="post.post">
-                        <a [routerLink]="['/blog', post.post?.id, 'view']">{{post.post?.id}}</a>
-                    </div>
-                </dd>
                 <dt><span>Blog</span></dt>
                 <dd>
                     <div *ngIf="post.blog">

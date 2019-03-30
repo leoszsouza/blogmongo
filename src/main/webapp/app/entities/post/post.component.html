@@ -18,7 +18,6 @@
             <th jhiSortBy="titulo"><span>Titulo</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="conteudo"><span>Conteudo</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="dhPublicacao"><span>Dh Publicacao</span> <fa-icon [icon]="'sort'"></fa-icon></th>
-            <th jhiSortBy="post.id"><span>Post</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="blog.id"><span>Blog</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
@@ -29,11 +28,6 @@
                 <td>{{post.titulo}}</td>
                 <td>{{post.conteudo}}</td>
                 <td>{{post.dhPublicacao | date:'medium'}}</td>
-                <td>
-                    <div *ngIf="post.post">
-                        <a [routerLink]="['../blog', post.post?.id, 'view' ]" >{{post.post?.id}}</a>
-                    </div>
-                </td>
                 <td>
                     <div *ngIf="post.blog">
                         <a [routerLink]="['../blog', post.blog?.id, 'view' ]" >{{post.blog?.id}}</a>

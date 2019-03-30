@@ -16,13 +16,6 @@
     ],
     "relationships": [
         {
-            "relationshipType": "many-to-one",
-            "otherEntityName": "blog",
-            "otherEntityRelationshipName": "post",
-            "relationshipName": "post",
-            "otherEntityField": "id"
-        },
-        {
             "relationshipName": "blog",
             "otherEntityName": "blog",
             "relationshipType": "many-to-one",
